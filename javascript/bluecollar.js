@@ -42,7 +42,8 @@ function printHelloWorld( elementID ){
 	Logs error messages to the browsers console.
 
 	**Input
-	An error and an message.
+	error - an error that was caught
+	message - a message you would like displayed in the log
 
 	**Output
 	Error message printed to browser console.
@@ -70,7 +71,8 @@ function logger( error , message ){
 	Logs error messages to the browsers console and then throws the error.
 
 	**Input
-	An error and an message.
+	error - the error that was caught
+	message - a message you would like displayed in the log
 
 	**Output
 	Error message printed to browser console.  Throws the error.
