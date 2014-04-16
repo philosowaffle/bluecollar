@@ -100,5 +100,53 @@ $(document).ready(function(){
 	*** END SUITE ***
 */
 
+
+/*
+	*** Timestamp Tests ***
+
+	** Functions tested in the Suite:
+	- getTimestampMilli();
+	- getTimestampSec();
+	- getDateTimestamp();
+*/
+
+//Function Suite
+	module("Timestamp Tests");
+
+//Function under test: getTimestampMilli()    
+    test("Throws exception passed", function(){
+
+    	var timestampFunc = getTimestampMilli();
+    	var timestampAct = Date.now();
+
+   		equal(timestampFunc, timestampAct, "Expect timestamps to be equal");
+
+    });
+
+//Function under test: getTimestampSec()    
+    test("Throws exception passed", function(){
+
+    	var timestampFunc = getTimestampSec();
+    	var timestampAct = Date.now() / 1000;
+
+   		equal(timestampFunc, timestampAct, "Expect timestamps to be equal");
+
+    });
+
+//Function under test: getDateTimestamp()    
+    test("Throws exception passed", function(){
+
+    	var timestampFunc = getDateTimestamp();
+    	var timestampAct = new Date();
+    	timestampAct = timestampAct.toString();
+
+   		equal(timestampFunc, timestampAct, "Expect timestamps to be equal");
+
+    });
+
+/*
+	*** END SUITE ***
+*/
+
 });
 //END OF TESTS
