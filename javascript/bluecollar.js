@@ -91,3 +91,31 @@ function logAndThrow( error , message ){
 }
 
 // END FUNCTION
+
+
+
+/*
+	*** Redirect ***
+
+	**Description
+	Redirects the user to a new site.
+
+	**Input
+	url - url to redirect to, fully qualified i.e. http://www.google.com
+
+	**Output
+	Redirects to the url.
+
+*/
+
+// GLOBALS
+
+// FUNCTION
+	
+function redirect( url ){
+
+	window.location.replace( url );
+
+}
+
+// END FUNCTION

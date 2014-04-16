@@ -31,9 +31,9 @@ $(document).ready(function(){
 //Function under test: printHelloWorld(var)    
     test("Print success on valid input", function(){
 
-   		printHelloWorld("helloWorldPrintHere");
+   		printHelloWorld("printHelloWorldTestElement");
 
-   		equal(document.getElementById("helloWorldPrintHere").innerHTML, "Hello World!" );
+   		equal(document.getElementById("printHelloWorldTestElement").innerHTML, "Hello World!" );
 
     });
 
@@ -70,6 +70,31 @@ $(document).ready(function(){
    		throws(function(){logAndThrow("myTestingError")}, expectedError, "Expecting 'MyTestingError' to be thrown.");
 
     });
+
+/*
+	*** END SUITE ***
+*/
+
+
+/*
+	*** Redirect *** **currently no good way to test other than manually
+
+	** Functions tested in the Suite:
+	- redirect(var);
+*/
+
+//Function Suite
+// 	 module("Redirect Tests");
+
+// //Function under test: redirect(var)    
+//     test("Throws exception passed", function(){
+
+//     	var iframe = document.getElementById("redirectTestElement");
+
+//     	equal(iframe.contentWindow.document.URL, "http://www.google.com", "Expecting iframe to be pointing to google.com.");
+
+
+//     });
 
 /*
 	*** END SUITE ***
