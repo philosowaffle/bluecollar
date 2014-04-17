@@ -9,6 +9,15 @@ In addition to wrapping up commonly performed javascript tasks, this api has the
 
 You are either a programmer who compulsively saves and documents useful code snippets, or you are not.  This library is for the latter.
 
+Usage
+=====
+
+Simply download the bluecollar.js and place it in your web projects path, then link to it like you would any other javascript file.  In general it is best to also make sure you are including jQuery and the bluecollar.css file as some functions may utilize these.
+
+    <link rel="stylesheet" href="path/to/bluecollar.css" type="text/css"/>
+    <script src="http://code.jquery.com/jquery-latest.js"> </script>
+    <script type="text/javascript" src="path/to/bluecollar.js"></script>
+
 
 Documentation
 =============
