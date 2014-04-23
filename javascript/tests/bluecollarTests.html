@@ -7,6 +7,12 @@
     <script type="text/javascript" src="resources/qunit-1.14.0.js"></script>
     <script type="text/javascript" src="bluecollarTests.js"></script>
     <script type="text/javascript" src="../bluecollar.js"></script>
+
+    <style>
+        #popup {
+          visibility: hidden;
+        }
+    </style>
   </head>
   <body>
       <!-- QUNIT RESULTS -->
@@ -26,6 +32,14 @@
       <iframe id="redirectTestElement" src="resources/redirectTestHelper.html"></iframe>
 
       <!-- END Redirect Test -->
+
+      <!-- PopOver Test -->
+
+    <div id="popup" ></div>
+
+    <div id="bcPopover"></div>
+
+      <!-- END PopOver Test -->
 
 
   </body>

@@ -23,11 +23,11 @@ function printHelloWorld( elementID ){
 		document.getElementById( elementID ).innerHTML = "Hello World!";
 
 	} catch( error ){
-		
+
 		logAndThrow( error, "It's possible the id you supplied does not exist." );
 
 	}
-	
+
 
 }
 
@@ -53,7 +53,7 @@ function printHelloWorld( elementID ){
 // GLOBALS
 
 // FUNCTION
-	
+
 function logger( error , message ){
 
 	window.console.log('bluecollarLog :: '+ error +' :: '+ message );
@@ -82,7 +82,7 @@ function logger( error , message ){
 // GLOBALS
 
 // FUNCTION
-	
+
 function logAndThrow( error , message ){
 
 	window.console.log('bluecollarLog :: '+ error +' :: '+ message );
@@ -111,7 +111,7 @@ function logAndThrow( error , message ){
 // GLOBALS
 
 // FUNCTION
-	
+
 function redirect( url ){
 
 	window.location.replace( url );
@@ -138,7 +138,7 @@ function redirect( url ){
 // GLOBALS
 
 // FUNCTION
-	
+
 function getTimestampMilli(){
 
 	if (!Date.now) {
@@ -172,7 +172,7 @@ function getTimestampMilli(){
 // GLOBALS
 
 // FUNCTION
-	
+
 function getTimestampSec(){
 
 	if (!Date.now) {
@@ -206,13 +206,83 @@ function getTimestampSec(){
 // GLOBALS
 
 // FUNCTION
-	
+
 function getDateTimestamp(){
 
 	var timestamp;
 
 	timestamp =  new Date().getTime();
 	return new Date(timestamp);
+
+}
+
+// END FUNCTION
+
+
+
+/*
+    *** displayPopOver ***
+
+    **Description
+    This brings the popover element into view and fades out the rest of the view.
+
+    **Input
+    elementID - element id to display
+
+    **Output
+    This brings the popover element into view and fades out the rest of the view.
+
+*/
+
+// GLOBALS
+
+// FUNCTION
+
+function displayPopOver( elementID ) {
+
+    var fog = document.createElement("div");
+    var popover = document.getElementById(elementID);
+
+    fog.setAttribute("id", "bcPopoverFog");
+
+    //The position of fog and popover must be the same and cannot == "relative"
+    fog.style.position = "absolute";
+    popover.style.position ="absolute";
+
+    document.body.insertBefore(fog, document.body.firstChild);
+    popover.style.zIndex = 2;
+    popover.style.visibility = "visible";
+
+}
+
+// END FUNCTION
+
+
+
+/*
+    *** hidePopOver ***
+
+    **Description
+    This hides the popover element.
+
+    **Input
+    elementID - element id to display
+
+    **Output
+    This brings the popover element into view and fades out the rest of the view.
+
+*/
+
+// GLOBALS
+
+// FUNCTION
+
+function hidePopOver( elementID ) {
+
+    $("#bcPopoverFog").remove();
+    var popover = document.getElementById(elementID);
+
+    popover.style.visibility = "hidden";
 
 }
 
