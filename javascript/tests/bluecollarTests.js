@@ -203,5 +203,51 @@ $(document).ready(function(){
 */
 
 
+
+/*
+    *** findInArray Tests ***
+
+    ** Functions tested in the Suite:
+    - findInArray(var,var)
+*/
+
+//Function Suite
+    module("findInArray Tests");
+
+//Function under test: findInArray(var,var)
+    test("Throws exception passed", function(){
+
+        var myArray = [];
+        var x;
+
+        for (x = 0; x < 100; x++) {
+
+            myArray[x] = "item" + x;
+
+        }
+
+        var test = findInArray("item0", myArray);
+
+        equal(test, 0);
+
+        test = findInArray("item50", myArray);
+
+        equal(test, 50);
+
+        test = findInArray("item99", myArray);
+
+        equal(test, 99);
+
+        test = findInArray("item100", myArray);
+
+        equal(test, -1);
+
+    });
+
+/*
+    *** END SUITE ***
+*/
+
+
 });
 //END OF TESTS

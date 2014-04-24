@@ -287,3 +287,46 @@ function hidePopOver( elementID ) {
 }
 
 // END FUNCTION
+
+
+
+/*
+    *** findInArray ***
+
+    **Description
+    Finds an element in a given array.
+
+    **Input
+    key - the element to find
+    array - the array to search in
+
+    **Output
+    Returns the index of the item in the array or -1 if not found.
+
+*/
+
+// GLOBALS
+
+// FUNCTION
+
+function findInArray( key, array ) {
+
+    var index = array.length;
+
+    while( index >= 0) {
+
+        if( array[index] === key ) {
+
+            return index;
+
+        }
+
+        index--;
+
+    }
+
+    return -1;
+
+}
+
+// END FUNCTION
