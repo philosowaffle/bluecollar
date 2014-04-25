@@ -16,7 +16,7 @@
 
 //FUNCTION
 
-function printHelloWorld( elementID ){
+function bc_printHelloWorld( elementID ){
 
 	try{
 
@@ -54,7 +54,7 @@ function printHelloWorld( elementID ){
 
 // FUNCTION
 
-function logger( error , message ){
+function bc_logger( error , message ){
 
 	window.console.log('bluecollarLog :: '+ error +' :: '+ message );
 
@@ -83,7 +83,7 @@ function logger( error , message ){
 
 // FUNCTION
 
-function logAndThrow( error , message ){
+function bc_logAndThrow( error , message ){
 
 	window.console.log('bluecollarLog :: '+ error +' :: '+ message );
 	throw error;
@@ -112,7 +112,7 @@ function logAndThrow( error , message ){
 
 // FUNCTION
 
-function redirect( url ){
+function bc_redirect( url ){
 
 	window.location.replace( url );
 
@@ -139,7 +139,7 @@ function redirect( url ){
 
 // FUNCTION
 
-function getTimestampMilli(){
+function bc_getTimestampMilli(){
 
 	if (!Date.now) {
 
@@ -173,7 +173,7 @@ function getTimestampMilli(){
 
 // FUNCTION
 
-function getTimestampSec(){
+function bc_getTimestampSec(){
 
 	if (!Date.now) {
 
@@ -207,7 +207,7 @@ function getTimestampSec(){
 
 // FUNCTION
 
-function getDateTimestamp(){
+function bc_getDateTimestamp(){
 
 	var timestamp;
 
@@ -238,7 +238,7 @@ function getDateTimestamp(){
 
 // FUNCTION
 
-function displayPopOver( elementID ) {
+function bc_displayPopOver( elementID ) {
 
     var fog = document.createElement("div");
     var popover = document.getElementById(elementID);
@@ -277,7 +277,7 @@ function displayPopOver( elementID ) {
 
 // FUNCTION
 
-function hidePopOver( elementID ) {
+function bc_hidePopOver( elementID ) {
 
     $("#bcPopoverFog").remove();
     var popover = document.getElementById(elementID);
@@ -309,7 +309,7 @@ function hidePopOver( elementID ) {
 
 // FUNCTION
 
-function findInArray( key, array ) {
+function bc_findInArray( key, array ) {
 
     var index = array.length;
 
@@ -326,6 +326,38 @@ function findInArray( key, array ) {
     }
 
     return -1;
+
+}
+
+// END FUNCTION
+
+
+
+/*
+    *** cloneObject ***
+
+    **Description
+    Clones an object.
+
+    **Input
+    object - a javascript object to clone
+
+    **Output
+    A clone of the given javascript object
+
+*/
+
+// GLOBALS
+
+// FUNCTION
+
+function bc_cloneObject( object ) {
+
+    var clone = function() {};
+
+    clone.prototype = object;
+
+    return new clone();
 
 }
 

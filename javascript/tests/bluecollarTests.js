@@ -31,18 +31,9 @@ $(document).ready(function(){
 //Function under test: printHelloWorld(var)
     test("Print success on valid input", function(){
 
-   		printHelloWorld("printHelloWorldTestElement");
+   		bc_printHelloWorld("printHelloWorldTestElement");
 
    		equal(document.getElementById("printHelloWorldTestElement").innerHTML, "Hello World!" );
-
-    });
-
-//Function under test: printHelloWorld(var)
-    test("Throw exception on invalid id", function(){
-
-   		var expectedError = new RegExp("TypeError:");
-
-   		throws(function(){ printHelloWorld("id_that_does_not_exist"); }, expectedError, "Expected a TypError to be thrown.");
 
     });
 
@@ -63,11 +54,11 @@ $(document).ready(function(){
 	module("Log And Throw Tests");
 
 //Function under test: logAndThrow(var,var)
-    test("Throws exception passed", function(){
+    test("Logs and Throws an exception", function(){
 
     	var expectedError = new RegExp("myTestingError");
 
-   		throws(function(){logAndThrow("myTestingError")}, expectedError, "Expecting 'MyTestingError' to be thrown.");
+   		throws(function(){bc_logAndThrow("myTestingError")}, expectedError, "Expecting 'MyTestingError' to be thrown.");
 
     });
 
@@ -114,9 +105,9 @@ $(document).ready(function(){
 	module("Timestamp Tests");
 
 //Function under test: getTimestampMilli()
-    test("Throws exception passed", function(){
+    test("Timestamp in milliseconds", function(){
 
-    	var timestampFunc = getTimestampMilli();
+    	var timestampFunc = bc_getTimestampMilli();
     	var timestampAct = Date.now();
 
    	equal(timestampFunc, timestampAct, "Expect timestamps to be equal");
@@ -124,9 +115,9 @@ $(document).ready(function(){
     });
 
 //Function under test: getTimestampSec()
-    test("Throws exception passed", function(){
+    test("Timestamp in seconds", function(){
 
-    	var timestampFunc = getTimestampSec();
+    	var timestampFunc = bc_getTimestampSec();
     	var timestampAct = Date.now() / 1000;
 
    	equal(timestampFunc, timestampAct, "Expect timestamps to be equal");
@@ -134,9 +125,9 @@ $(document).ready(function(){
     });
 
 //Function under test: getDateTimestamp()
-    test("Throws exception passed", function(){
+    test("Timestamp as datetime", function(){
 
-    	var timestampFunc = getDateTimestamp();
+    	var timestampFunc = bc_getDateTimestamp();
     	var timestampAct = new Date();
     	timestampAct = timestampAct.toString();
 
@@ -163,18 +154,18 @@ $(document).ready(function(){
 
 //Function under test: displayPopOver(var)
 //and hidePopOver(var);
-    test("Throws exception passed", function(){
+    test("Shows and hides popover succesfully", function(){
 
         var popup = document.getElementById("popup");
         var bcPopover = document.getElementById("bcPopover");
 
-        displayPopOver("popup");
+        bc_displayPopOver("popup");
 
         equal(popup.style.position, "absolute");
         equal(popup.style.visibility, "visible");
         equal(popup.style.zIndex, 2);
 
-        hidePopOver("popup");
+        bc_hidePopOver("popup");
 
         equal(popup.style.visibility, "hidden");
 
@@ -182,13 +173,13 @@ $(document).ready(function(){
 
         equal(fog, null);
 
-        displayPopOver("bcPopover");
+        bc_displayPopOver("bcPopover");
 
         equal(bcPopover.style.position, "absolute");
         equal(bcPopover.style.visibility, "visible");
         equal(bcPopover.style.zIndex, 2);
 
-        hidePopOver("bcPopover");
+        bc_hidePopOver("bcPopover");
 
         equal(bcPopover.style.visibility, "hidden");
 
@@ -215,7 +206,7 @@ $(document).ready(function(){
     module("findInArray Tests");
 
 //Function under test: findInArray(var,var)
-    test("Throws exception passed", function(){
+    test("Find items in an array", function(){
 
         var myArray = [];
         var x;
@@ -226,21 +217,77 @@ $(document).ready(function(){
 
         }
 
-        var test = findInArray("item0", myArray);
+        var test = bc_findInArray("item0", myArray);
 
         equal(test, 0);
 
-        test = findInArray("item50", myArray);
+        test = bc_findInArray("item50", myArray);
 
         equal(test, 50);
 
-        test = findInArray("item99", myArray);
+        test = bc_findInArray("item99", myArray);
 
         equal(test, 99);
 
-        test = findInArray("item100", myArray);
+        test = bc_findInArray("item100", myArray);
 
         equal(test, -1);
+
+    });
+
+/*
+    *** END SUITE ***
+*/
+
+
+
+/*
+    *** cloneObject Tests ***
+
+    ** Functions tested in the Suite:
+    - cloneObject(var)
+*/
+
+//Function Suite
+    module("cloneObject Tests");
+
+//Function under test: findInArray(var,var)
+    test("Clones an object", function(){
+
+        var obj = {one: "obj"};
+
+        var myObject = {
+            a: 1,
+            b: 2,
+            c: 3,
+            d: 4,
+            e: 5,
+            f:  6,
+            g: 7,
+            h: 8,
+            i: 9,
+            j: 10,
+            k: function() {return "stegosaurus";},
+            l: ["cat", "dog", "mouse"],
+            m: obj
+        };
+        var x;
+
+        var clone = bc_cloneObject(myObject);
+
+        equal(clone.a, myObject.a);
+        equal(clone.b, myObject.b);
+        equal(clone.c, myObject.c);
+        equal(clone.d, myObject.d);
+        equal(clone.e, myObject.e);
+        equal(clone.f, myObject.f);
+        equal(clone.g, myObject.g);
+        equal(clone.h, myObject.h);
+        equal(clone.i, myObject.i);
+        equal(clone.j, myObject.j);
+        equal(clone.k, myObject.k);
+        equal(clone.l, myObject.l);
+        equal(clone.m, myObject.m);
 
     });
 
