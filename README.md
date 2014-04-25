@@ -3,7 +3,7 @@ bluecollar
 
 Just some good old-fashioned tools for a blue-collar coder.
 
-bluecollar is an api that wraps traditional javascript and jQuery.  The most basic goal of this library of functions is to document and make easily available some of the  most common and repetitive javascript functions that your average javascript novice encounters.  Many of the functions currently in the library are inspired by the top voted javascript questions in [StackOverflow](http://stackoverflow.com/questions/tagged/javascript?page=2&sort=votes&pagesize=15).
+bluecollar is an api that wraps traditional javascript and jQuery.  The most basic goal of this library of functions is to document and make easily available some of the  most common and repetitive javascript functions that your average javascript novice encounters.  Many of the functions currently in the library are inspired by the top voted javascript questions in [StackOverflow](http://stackoverflow.com/questions/tagged/javascript?page=3&sort=votes&pagesize=15).
 
 In addition to wrapping up commonly performed javascript tasks, this api has the goal of simplicity.  Any user should be able to grab the bluecollar.js file, drop it in their path, and go.  Functions that are implemented in bluecollar should attempt to be as straight-forward and simplified as possible to encourage the library to be easily and quickly customizable.
 
