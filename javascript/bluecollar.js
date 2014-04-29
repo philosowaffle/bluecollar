@@ -1,14 +1,22 @@
 /*
-	*** Hello World ***
-
-	**Description
-	Prints 'Hello World!' to the screen in the given element.
-
-	**Inputs
-	elementID - The #id of the element you want to display the output in.
-
-	**Output
-	'Hello World!'
+        +[title]: printHelloWorld()
+        +[description]: Prints 'Hello World!' to the screen in the given element.
+        +[inputs]:{
+        	-[var]: elementID -> The #id of the element you want to display the output in
+        }
+        +[outputs]: 'Hello Wold!'
+        +[example]: {
+        	-[code]: {
+        		<html> 
+        			<div id="printHere"></div>
+        			
+        			<script>
+        				bc_printHelloWorld('printHere');
+        			</script>
+        		</html>
+        	}
+        }
+        +[compatibility]: All known browsers
 
 */
 
