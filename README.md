@@ -26,6 +26,8 @@ With an api that aims to be as broad as this one does, documentation is a must. 
 
 [API Documentation](https://github.com/philosowaffle/bluecollar/wiki)
 
+This project additionally serves as a beta tester for the [docme](https://github.com/philosowaffle/docme) project.  Each javascript function should support the docme [syntax](https://github.com/philosowaffle/docme).  Naturally the docme project is in its early stages meaning changes will be often and not always backwards compatible.  This project will still try to use the docme tool in order to help find bugs and suggest enhancements.  You can checkout the project and run it locally or you can install the [RubyGem](https://rubygems.org/gems/docme).
+
 
 Contribution
 ============
