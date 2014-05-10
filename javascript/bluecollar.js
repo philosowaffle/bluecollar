@@ -1,21 +1,19 @@
 /*
         +[title]: printHelloWorld()
         +[description]: Prints 'Hello World!' to the screen in the given element.
-        +[inputs]:{
-        	-[var]: elementID -> The #id of the element you want to display the output in
-        }
+        +[inputs]:{{
+        	-[elementID]: The #id of the element you want to display the output in
+        }}
         +[outputs]: 'Hello Wold!'
-        +[example]: {
-        	-[code]: {
-        		<html> 
+        +[code]: {{
+        		<html>
         			<div id="printHere"></div>
-        			
+
         			<script>
         				bc_printHelloWorld('printHere');
         			</script>
         		</html>
-        	}
-        }
+        }}
         +[compatibility]: All known browsers
 
 */
@@ -42,19 +40,23 @@ function bc_printHelloWorld( elementID ){
 //END FUNCTION
 
 
-
 /*
-	*** LOGGING ***
 
-	**Description
-	Logs error messages to the browsers console.
-
-	**Input
-	error - an error that was caught
-	message - a message you would like displayed in the log
-
-	**Output
-	Error message printed to browser console.
+        +[title]: logger()
+        +[description]: Logs error messages to the browsers console.
+        +[inputs]:{{
+            -[error]: an error that was caught
+            -[message]: a message you would like displayed in the log
+        }}
+        +[outputs]: Error message printed to browser console.
+        +[code]: {{
+                <script>
+                  bc_logger(error, "Something broke...");  // Output: 'bluecollarLog :: '+ error +' :: Something broke...'
+                  bc_logger(error); // Output: 'bluecollarLog :: '+ error
+                  bc_logger("Stop breaking things."); // Output: 'bluecollarLog :: Stop breaking things.'
+                </script>
+        }}
+        +[known compatibility]: Chrome
 
 */
 
@@ -73,17 +75,22 @@ function bc_logger( error , message ){
 
 
 /*
-	*** LOG AND THROW ***
 
-	**Description
-	Logs error messages to the browsers console and then throws the error.
-
-	**Input
-	error - the error that was caught
-	message - a message you would like displayed in the log
-
-	**Output
-	Error message printed to browser console.  Throws the error.
+        +[title]: logAndThrow()
+        +[description]: Logs error messages to the browsers console and then throws the error.
+        +[inputs]:{{
+            -[error]: an error that was caught
+            -[message]: a message you would like displayed in the log
+        }}
+        +[outputs]: Error message printed to browser console.
+        +[code]: {{
+                <script>
+                   bc_logAndThrow(error, "You broke it."); // Output: 'bluecollarLog :: '+ error +' :: You broke it.'
+                   bc_logAndThrow(error); // Output: 'bluecollarLog :: '+ error
+                   bc_logAndThrow("You broke it."); // Output: 'bluecollarLog :: You broke it.'
+                </script>
+        }}
+        +[known compatibility]: Chrome
 
 */
 
@@ -102,17 +109,21 @@ function bc_logAndThrow( error , message ){
 
 
 
+
 /*
-	*** Redirect ***
 
-	**Description
-	Redirects the user to a new site.
-
-	**Input
-	url - url to redirect to, fully qualified i.e. http://www.google.com
-
-	**Output
-	Redirects to the url.
+        +[title]: redirect()
+        +[description]: Redirects the user to a new site.
+        +[inputs]:{{
+            -[url]: url to redirect to, fully qualified i.e. http://www.google.com
+        }}
+        +[outputs]: Redirects to the url.
+        +[code]: {{
+                <script>
+                    bc_redirect("http://www.google.com");
+                </script>
+        }}
+        +[known compatibility]: Chrome
 
 */
 
@@ -131,15 +142,16 @@ function bc_redirect( url ){
 
 
 /*
-	*** getTimestampMilli ***
 
-	**Description
-	This returns the milliseconds elapsed since 1 January 1970 00:00:00 UTC up until now as a Number.
-
-	**Input
-
-	**Output
-	returns a Number of milliseconds
+        +[title]: getTimestampMilli()
+        +[description]: This returns the milliseconds elapsed since 1 January 1970 00:00:00 UTC up until now as a Number.
+        +[outputs]: returns a Number of milliseconds
+        +[code]: {{
+                <script>
+                    bc_getTimestampMilli();
+                </script>
+        }}
+        +[known compatibility]: Chrome
 
 */
 
@@ -165,15 +177,16 @@ function bc_getTimestampMilli(){
 
 
 /*
-	*** getTimestampSec ***
 
-	**Description
-	This returns the seconds elapsed since 1 January 1970 00:00:00 UTC up until now as a Number.
-
-	**Input
-
-	**Output
-	returns a Number of seconds
+        +[title]: getTimestampSec()
+        +[description]: This returns the seconds elapsed since 1 January 1970 00:00:00 UTC up until now as a Number.
+        +[outputs]: returns a Number of seconds
+        +[code]: {{
+                <script>
+                    bc_getTimestampSec();
+                </script>
+        }}
+        +[known compatibility]: Chrome
 
 */
 
@@ -198,16 +211,18 @@ function bc_getTimestampSec(){
 
 
 
+
 /*
-	*** getDateTimestamp ***
 
-	**Description
-	This returns the current timestamp of the form: Fri Feb 13 2009 18:31:30 GMT-0500 (EST)
-
-	**Input
-
-	**Output
-	returns the current timestamp of the form: Fri Feb 13 2009 18:31:30 GMT-0500 (EST)
+        +[title]: getDateTimestamp()
+        +[description]: This returns the current timestamp of the form: Fri Feb 13 2009 18:31:30 GMT-0500 (EST)
+        +[outputs]: returns the current timestamp of the form: Fri Feb 13 2009 18:31:30 GMT-0500 (EST)
+        +[code]: {{
+                <script>
+                    bc_getDateTimestamp();
+                </script>
+        }}
+        +[known compatibility]: Chrome
 
 */
 
@@ -229,16 +244,30 @@ function bc_getDateTimestamp(){
 
 
 /*
-    *** displayPopOver ***
 
-    **Description
-    This brings the popover element into view and fades out the rest of the view.
+        +[title]: displayPopOver()
+        +[description]: This brings the popover element into view and fades out the rest of the view.
+        +[input]: {{
+            -[elementID]: element id to display
+        }}
+        +[outputs]: This brings the popover element into view and fades out the rest of the view.
+        +[code]: {{
+                <div id="container">
+                    <button onclick="bc_displayPopOver("popthis")">Show Popup!</button>
 
-    **Input
-    elementID - element id to display
-
-    **Output
-    This brings the popover element into view and fades out the rest of the view.
+                    <div id="popthis">
+                        <button onclick="bc_hidePopOver("popthis")">Hide Me!</button>
+                    </div>
+                </div>
+        }}
+        +[known compatibility]:{{
+            -[browser]: Chrome
+            -[browser]: Safari
+            -[browser]: Firefox
+        }}
+        +[anchor]:{{
+            -[hidePopOver]: hidePopOver()
+        }}
 
 */
 
@@ -268,16 +297,30 @@ function bc_displayPopOver( elementID ) {
 
 
 /*
-    *** hidePopOver ***
 
-    **Description
-    This hides the popover element.
+        +[title]: hidePopOver()
+        +[description]: This hides the popover element.
+        +[input]: {{
+            -[elementID]: element id to hide
+        }}
+        +[outputs]: hides the popover view and returns the rest of the view to normal
+        +[code]: {{
+                <div id="container">
+                    <button onclick="bc_displayPopOver("popthis")">Show Popup!</button>
 
-    **Input
-    elementID - element id to display
-
-    **Output
-    This brings the popover element into view and fades out the rest of the view.
+                    <div id="popthis">
+                        <button onclick="bc_hidePopOver("popthis")">Hide Me!</button>
+                    </div>
+                </div>
+        }}
+        +[known compatibility]:{{
+            -[browser]: Chrome
+            -[browser]: Safari
+            -[browser]: Firefox
+        }}
+        +[anchor]:{{
+            -[hidePopOver]: displayPopOver()
+        }}
 
 */
 
@@ -299,17 +342,26 @@ function bc_hidePopOver( elementID ) {
 
 
 /*
-    *** findInArray ***
 
-    **Description
-    Finds an element in a given array.
+        +[title]: findInArray()
+        +[description]: Finds an element in a given array.
+        +[input]: {{
+            -[key]:  the element to find
+            -[array]: the array to search in
+        }}
+        +[outputs]: Returns the index of the item in the array or -1 if not found.
+        +[code]: {{
+                <script>
 
-    **Input
-    key - the element to find
-    array - the array to search in
+                  var things = {"firstThing", "secondThing", "findThisThing", "someThing"};
 
-    **Output
-    Returns the index of the item in the array or -1 if not found.
+                  var myFoundThing = bc_findInArray("findThisThing", things);    //returns 2
+
+             </script>
+        }}
+        +[known compatibility]:{{
+            -[browser]: Chrome
+        }}
 
 */
 
@@ -342,16 +394,25 @@ function bc_findInArray( key, array ) {
 
 
 /*
-    *** cloneObject ***
 
-    **Description
-    Clones an object.
+        +[title]: cloneObject()
+        +[description]:  Clones an object.
+        +[input]: {{
+            -[object]:  a javascript object to clone
+        }}
+        +[outputs]: A clone of the given javascript object
+        +[code]: {{
+                <script>
+                       var obj = {a:1, b:2, c: function(){return 3;}};
 
-    **Input
-    object - a javascript object to clone
+                      var clonedObj = bc_cloneObject(obj);
 
-    **Output
-    A clone of the given javascript object
+                    </script>
+        }}
+        +[known compatibility]:{{
+            -[browser]: Chrome
+            -[browser]: Firefox
+        }}
 
 */
 
