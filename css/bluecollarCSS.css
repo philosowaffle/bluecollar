@@ -1,0 +1,35 @@
+/*
+
+        +[title]: PopoverFog
+        +[description]: This covers the content and gives the illusion of it being out of focus when the popover appears.
+        +[anchor]:{{
+            -[displayPopOver]: bluecollar.html#displayPopOver()
+            -[hidePopOver]: bluecollar.html#hidePopOver()
+        }}
+
+*/
+#bcPopoverFog {
+    z-index: 1;
+    background-color: #eee;
+    height: 100%;
+    width: 100%;
+    opacity: 0.35;
+    position: absolute;
+}
+
+
+/*
+
+        +[title]: Popover
+        +[description]: This is the popover that appears.
+        +[anchor]:{{
+            -[displayPopOver]: bluecollar.html#displayPopOver()
+            -[hidePopOver]: bluecollar.html#hidePopOver()
+        }}
+
+*/
+#bcPopover {
+    z-index: 2;
+    position: absolute;
+    visibility: hidden;
+}

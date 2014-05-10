@@ -267,6 +267,8 @@ function bc_getDateTimestamp(){
         }}
         +[anchor]:{{
             -[hidePopOver]: hidePopOver()
+            -[popOver Fog]: bluecollarCSS.html#PopoverFog
+            -[popOver]: bluecollarCSS.html#Popover
         }}
 
 */
@@ -319,7 +321,9 @@ function bc_displayPopOver( elementID ) {
             -[browser]: Firefox
         }}
         +[anchor]:{{
-            -[hidePopOver]: displayPopOver()
+            -[displayPopOver]: displayPopOver()
+            -[popOver Fog]: bluecollarCSS.html#PopoverFog
+            -[popOver]: bluecollarCSS.html#Popover
         }}
 
 */

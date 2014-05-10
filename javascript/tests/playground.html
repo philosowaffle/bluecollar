@@ -2,16 +2,38 @@
       "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="../../css/bluecollarCSS.css">
     <script src="http://code.jquery.com/jquery-latest.js"> </script>
     <script type="text/javascript" src="bluecollarTests.js"></script>
     <script type="text/javascript" src="../bluecollar.js"></script>
     <script type="text/javascript" src="resources/qunit-1.14.0.js"></script>
+
+    <style>
+
+          #popup{
+            visibility: hidden;
+            border: 1px solid black;
+            background-color: green;
+          }
+
+    </style>
   </head>
   <body>
 
     <!--  DO NOT COMMIT CHANGES MADE TO THIS FILE, THIS IS FOR LOCAL TESTING ONLY -->
 
-    <script> printHelloWorld(); </script>
+
+    <button onclick="displayPopOver('popup')" >Pop it!</button>
+
+    <div id="popup" >
+
+
+        WooHoo!! <br />
+
+        <button onclick="hidePopOver('popup')">Kill it!</button>
+
+
+    </div>
 
 
 
