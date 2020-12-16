@@ -35,3 +35,5 @@ Contribution
 This library is only as robust as the group of programmers contributing to it.  A goal would be that this become a dumping ground for anytime a developer comes across a useful javascript snippet.  And in order to ensure that contributions made are useful and functional unit testing will be done using the QUnit framework.  More information about contributing can be found on the pull request info page.
 
 [Pull Request Info](https://github.com/philosowaffle/bluecollar/wiki/Pull-Requests)
+
+<a href="https://www.buymeacoffee.com/philosowaffle" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/black_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
